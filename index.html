@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+        <title>My Portfolio</title>
+    </head>
+
+    <body>
+
+         <!-- HEADER  -->
+
+        <header class="header">
+            <!-- <a href="#home" class="logo">Loyd</a> -->
+            <nav class="navbar">
+                <a href="#home" class="active">Home</a>
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <!-- <a href="#projects">Projects</a> -->
+                <a href="#contact">Contact</a>
+            </nav>
+        </header>
+     
+        <!-- HOME SECTION -->
+
+        <section id="home" class="home">
+            <div class="home-content">
+                <h2>Hello, my name is</h2>
+                <h1>Loyd Ngei</h1>
+                <h3>I am a Software Engineer</h3>
+                <p>
+                    
+                </p>
+
+                <div class="btn-box">
+                    <a href="#contact">Hire Me</a>
+                    <a href="#contact">Let's Talk</a>
+                </div>
+            </div>
+            
+            <span class="home-img">
+                <img src="image/Image.jpg">
+            </span>
+
+        </section>
+
+
+        <!--ABOUT ME -->
+
+        <section id="about" class="about">
+            <div class="about-content">
+                <h1>ABOUT</h1>
+                <p>
+                    Loyd is a highly skilled Software Engineer specializing in Backend Development with a strong foundation in Frontend technologies. I'm proud to be an alumnus of the prestigious ALX Africa Software Engineering program, where I honed my technical expertise and problem-solving skills.
+                </p>
+                <p>
+                    My passion for crafting efficient and scalable solutions drives me to excel in the world of software development. With a keen eye for detail and a commitment to excellence, I ensure that I meet and exceed project requirements, delivering high-quality software that stands out in the industry.
+                </p>
+                <p>
+                    I thrive in dynamic and collaborative environments, where I can collaborate with cross-functional teams to turn innovative ideas into reality. My ability to adapt quickly to emerging technologies and my dedication to continuous learning keep me at the forefront of the ever-evolving tech landscape.
+                </p>
+                <p>
+                    When I'm not coding, you can find me sharing my knowledge and experience with the tech community. I'm always eager to take on exciting new opportunities and collaborate on projects that make a positive impact.
+                </p>
+            </div>
+        </section>
+
+            </div>
+
+        </section>
+
+        <!--SKILLS SECTION-->
+
+        <section id = "skills" class="skills">
+            <div class="skills-content">
+                <div class="skills-title">
+                    <h1>SKILLS</h1>
+                </div>
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original-wordmark.svg" />
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" />
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" />
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original-wordmark.svg" />
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original-wordmark.svg" />
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-plain-wordmark.svg" />     
+                
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" />
+          
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original-wordmark.svg" />
+            </div>
+
+        </section>
+
+
+        <!--CONTACT SECTION-->
+
+        <section id = "contact" class="contact">
+            <div class="contact-content">
+                <h1>CONTACT</h1>
+                <form class="my-form">
+                    <input placeholder="Username" required>
+                    <input placeholder="Email" required>
+                    <textarea placeholder="Message" required></textarea>
+                    <Button>Submit</Button>
+                </form>
+            </div>
+        </section>
+
+        <!--SOCIAL MEDIA -->
+
+        <footer>
+            <div class="media">
+                <a href="https://twitter.com/NgeiLoyd" target="_blank"><i class="fa-brands fa-x-twitter fa-beat-fade"></i></a>
+                <a href="https://www.linkedin.com/in/loyd-ngei-151736231/" target="_blank"><i class="fa-brands fa-linkedin fa-beat-fade"></i></a>
+                <a href="https://github.com/LoydNgei" target="_blank"><i class="fa-brands fa-github fa-beat-fade"></i></a>
+            </div>
+            <p class="Copyright">Developed with   <i class="fa-solid fa-heart fa-spin"></i> by Loyd &copy;</p>
+        </footer>
+
+
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+              const navLinks = document.querySelectorAll(".navbar a");
+          
+              navLinks.forEach(function (link) {
+                link.addEventListener("click", function (event) {
+                  event.preventDefault();
+          
+                  const targetId = this.getAttribute("href").substring(1);
+                  const targetSection = document.getElementById(targetId);
+          
+                  if (targetSection) {
+                    window.scrollTo({
+                      top: targetSection.offsetTop,
+                      behavior: "smooth",
+                    });
+                  }
+                });
+              });
+            });
+          </script>
+          
+
+    </body>
+</html>
