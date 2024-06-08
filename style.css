@@ -236,34 +236,60 @@ body {
     }
 }
   
-
+/* General styles for the about section */
 .about {
     display: flex;
     justify-content: center;
-    padding: 20px;
-    text-align: center; /* Center-align text for smaller screens */
-}
+    align-items: center;
+    padding: 40px 20px; 
+    background-color: #111; 
+    color: #ededed;
 
+/* Container for the about content */
 .about-content {
-    max-width: 700px;
-    width: 100%; /* Ensure content doesn't overflow on smaller screens */
+    max-width: 800px; 
+    width: 100%; 
+    text-align: left; 
+    line-height: 1.6; 
 }
 
+/* Header styling */
 .about-content h1 {
-    font-size: 24px;
-    margin: 20px;
+    font-size: 32px; 
+    margin-bottom: 20px;
+    border-bottom: 2px solid #00abf0; 
+    padding-bottom: 10px;
 }
 
+/* Paragraph styling */
 .about-content p {
-    font-size: 20px;
-    letter-spacing: 1.2px;
-    margin: 10px 0; /* Add some vertical spacing between paragraphs */
+    font-size: 18px; 
+    margin: 15px 0;
+}
+
+/* Responsive design for smaller screens */
+@media screen and (max-width: 768px) {
+    .about {
+        padding: 20px 10px; 
+    }
+
+    .about-content {
+        text-align: center;
+    }
+
+    .about-content h1 {
+        font-size: 24px;
+    }
+
+    .about-content p {
+        font-size: 16px; 
+    }
 }
 
 /* Media query for smaller screens (e.g., mobile devices) */
 @media (max-width: 768px) {
     .about-content {
-        padding: 10px; /* Reduce padding for smaller screens */
+        padding: 10px; 
     }
     
     .about-content h1 {
@@ -275,49 +301,61 @@ body {
         font-size: 18px;
     }
 }
-
+/* General styles for the skills section */
 .skills {
-    padding: 20px;
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
-}
-  
-.skills-content {
-    text-align: center; 
-    width: 55%;
-}
-  
-.skills-content h1 {
-    font-size: 24px;
-    margin: 40px;
-}
-  
-.skills-content img {
-    height: 100px;
-    padding: 12px;
-    margin: 30px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    border-radius: 10px;
+    align-items: center;
+    padding: 40px 20px; /* Increase padding for more space around the content */
+    background-color: #111; /* Add a background color for contrast */
+    color: #ededed; /* Ensure text color contrasts well with background */
 }
 
-/* New CSS for displaying two icons per row */
-@media (max-width: 768px) {
-    .skills-content {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr); /* Display two columns */
-        grid-gap: 20px; /* Adjust the gap between icons */
-        text-align: center;
+.skills-content {
+    text-align: center;
+}
+
+.skills-title h1 {
+    font-size: 32px; /* Increase font size for larger screens */
+    margin-bottom: 20px; /* Add bottom margin for spacing */
+    border-bottom: 2px solid #00abf0; /* Add an underline for emphasis */
+    display: inline-block;
+    padding-bottom: 10px; /* Add padding for spacing */
+}
+
+.skills-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr)); /* Create responsive grid */
+    gap: 15px; /* Add space between grid items */
+    justify-items: center; /* Center the grid items */
+    align-items: center; /* Center the grid items vertically */
+}
+
+.skills-content img {
+    width: 50px; /* Set a fixed size for the skill icons */
+    height: 20px;
+    transition: transform 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.skills-content img:hover {
+    transform: scale(1.1); /* Slightly enlarge icon on hover */
+}
+
+/* Responsive design for smaller screens */
+@media screen and (max-width: 768px) {
+    .skills {
+        padding: 20px 10px; /* Reduce padding for smaller screens */
     }
 
-    .skills-title {
-        grid-column: 1 / -1; 
+    .skills-title h1 {
+        font-size: 24px; /* Decrease font size for smaller screens */
     }
 
     .skills-content img {
-        margin: 0; /* Remove margin */
+        width: 40px; /* Decrease icon size for smaller screens */
     }
 }
+
 
 
 .contact {
@@ -399,4 +437,5 @@ footer {
     justify-content: center;
     align-items: center;
     padding: 10px; 
+}
 }
