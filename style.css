@@ -6,11 +6,11 @@
 }
 
 body {
-    background:#081b29;
-    color:#ededed;
+    background: #000000;
+    color: #ededed;
 }
 
-.header{
+.header {
     position: fixed;
     top: 0;
     left: 0;
@@ -18,16 +18,9 @@ body {
     padding: 20px 10%;
     background: transparent;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: center;
     z-index: 100;
-}
-
-.logo {
-    font-size: 25px;
-    color: #ededed;
-    text-decoration: none;
-    font-weight: 600;
 }
 
 .navbar a {
@@ -39,27 +32,56 @@ body {
 }
 
 .navbar a:hover,
-.navbar a.active{
+.navbar a.active {
     color: #00abf0;
+}
+
+.menu-icon {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+/* Transition effect */
+.navbar {
+    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+}
+
+.navbar.show {
+    transform: translateY(0);
+    opacity: 1;
 }
 
 
 /* Media query for mobile devices */
 @media screen and (max-width: 768px) {
-    .header {
-        flex-direction: row;
-        padding: 20px 10%;
-    }
-
     .navbar {
-        margin-top: 10px;
+        display: flex;
+        flex-direction: column;
+        background-color: #000000;
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        padding: 10px 0;
+        align-items: center;
+        transform: translateY(-100%);
+        opacity: 0;
     }
 
     .navbar a {
-        margin: 7px;
-        font-size: 14px;
+        margin: 10px 0;
+        text-align: center;
+        font-size: 18px;
+    }
+
+    .menu-icon {
+        display: block;
     }
 }
+
+
+
 .home{
     height: 100vh;
     background-size: cover;
@@ -289,7 +311,7 @@ body {
     }
 
     .skills-title {
-        grid-column: 1 / -1; /* Span across both columns */
+        grid-column: 1 / -1; 
     }
 
     .skills-content img {
@@ -364,11 +386,11 @@ footer {
 .media {
     display: flex;
     justify-content: center;
-    margin-bottom: 20px; /* Add margin to push the media icons up */
+    margin-bottom: 20px; 
 }
 
 .media a {
-    margin: 0 15px; /* Adjust margin for the media icons */
+    margin: 0 15px; 
     font-size: 40px;
 }
 
@@ -376,5 +398,5 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 10px; /* Add padding to the bottom */
+    padding: 10px; 
 }
