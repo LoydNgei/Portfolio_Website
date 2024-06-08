@@ -6,6 +6,7 @@
         <link rel="stylesheet" href="style.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+        <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
         <title>My Portfolio</title>
     </head>
 
@@ -15,17 +16,19 @@
 
         <header class="header">
             <!-- <a href="#home" class="logo">Loyd</a> -->
+            <div class="menu-icon" onclick="toggleMenu()">
+                <i class="fas fa-bars"></i>
+            </div>
             <nav class="navbar">
                 <a href="#home" class="active">Home</a>
                 <a href="#about">About</a>
                 <a href="#skills">Skills</a>
-                <!-- <a href="#projects">Projects</a> -->
+                <a href="#projects">Projects</a>
                 <a href="#contact">Contact</a>
             </nav>
         </header>
-     
-        <!-- HOME SECTION -->
 
+        <!-- HOME SECTION -->
         <section id="home" class="home">
             <div class="home-content">
                 <h2>Hello, my name is</h2>
@@ -84,14 +87,49 @@
                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" />
                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original-wordmark.svg" />
                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original-wordmark.svg" />
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-plain-wordmark.svg" />     
-                
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" />
-          
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-plain-wordmark.svg" />         
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" />
                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original-wordmark.svg" />
             </div>
 
         </section>
+
+        <!-- PROJECTS SECTION -->
+ 
+        <section id="projects" class="py-8">
+            <div class="container mx-auto px-4">
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+                    <!-- Project 1 -->
+                    <div class="relative bg-cover bg-center h-64 rounded-lg shadow-md" style="background-image: url('path/to/your/image1.jpg');">
+                        <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center rounded-lg">
+                            <h3 class="text-white text-lg font-semibold">Project 1</h3>
+                        </div>
+                    </div>
+
+                    <!-- Project 2 -->
+                    <div class="relative bg-cover bg-center h-64 rounded-lg shadow-md" style="background-image: url('path/to/your/image2.jpg');">
+                        <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center rounded-lg">
+                            <h3 class="text-white text-lg font-semibold">Project 2</h3>
+                        </div>
+                    </div>
+
+                    <!-- Project 3 -->
+                    <div class="relative bg-cover bg-center h-64 rounded-lg shadow-md" style="background-image: url('path/to/your/image3.jpg');">
+                        <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center rounded-lg">
+                            <h3 class="text-white text-lg font-semibold">Project 3</h3>
+                        </div>
+                    </div>
+
+                    <!-- More projects here -->
+
+                    <!-- See More Section -->
+                    <div class="col-span-full mt-4 flex justify-center">
+                        <a href="#" class="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600">See More</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
 
 
         <!--CONTACT SECTION-->
@@ -100,9 +138,14 @@
             <div class="contact-content">
                 <h1>CONTACT</h1>
                 <form class="my-form">
-                    <input placeholder="Username" required>
-                    <input placeholder="Email" required>
-                    <textarea placeholder="Message" required></textarea>
+                    <label></label>
+                    <input type="text" placeholder="Username" name="username" id="username" required>
+
+                    <label></label>
+                    <input type="email" placeholder="Email" name="email" id="email" required>
+
+                    <label></label>
+                    <textarea type="text" placeholder="Message" name="message" id="message" required></textarea>
                     <Button>Submit</Button>
                 </form>
             </div>
@@ -118,30 +161,6 @@
             </div>
             <p class="Copyright">Developed with   <i class="fa-solid fa-heart fa-spin"></i> by Loyd &copy;</p>
         </footer>
-
-
-        <script>
-            document.addEventListener("DOMContentLoaded", function () {
-              const navLinks = document.querySelectorAll(".navbar a");
-          
-              navLinks.forEach(function (link) {
-                link.addEventListener("click", function (event) {
-                  event.preventDefault();
-          
-                  const targetId = this.getAttribute("href").substring(1);
-                  const targetSection = document.getElementById(targetId);
-          
-                  if (targetSection) {
-                    window.scrollTo({
-                      top: targetSection.offsetTop,
-                      behavior: "smooth",
-                    });
-                  }
-                });
-              });
-            });
-          </script>
-          
-
+        <script src="index.js"></script>
     </body>
 </html>
